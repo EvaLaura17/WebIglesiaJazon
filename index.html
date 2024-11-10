@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+     <!-- CSS estilos link -->
+     <link rel="stylesheet" href="css/estilos.css">  
+    
+    <title>Página Principal</title>
+</head>
+<body>
+    <!-- CABECERA -->
+    <header class="p-3">
+        <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <div class="title-container">
+                    <img src="img/logoFinal.png" class="logo" alt="Logo de la Iglesia">
+                </div>
+                <span class="title">Iglesia Jazon</span>
+                <ul class="nav col-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2">Inicio</a></li>
+                    <li><a href="index2.html" class="nav-link px-2">Dashboard</a></li>
+                </ul>
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-secondary"><a href="login.html" class="text-decoration-none text-light">Login</a></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bienvenida -->
+    <div class="Bienven">
+        <p>Bienvenido a Jazon</p>
+        <p>¡Una iglesia de cristianos con propósito!</p>
+    </div>
+
+    <!-- Filtro de eventos -->
+<div class="filter-container">
+    <label for="eventFilter" class="form-label">Ver eventos:</label>
+    <select id="eventFilter" class="form-select w-auto d-inline">
+        <option value="all">Todos</option>
+        <option value="past">Eventos Pasados</option>
+        <option value="current">Eventos Actuales</option>
+        <option value="future">Eventos Futuros</option>
+    </select>
+</div>
+
+<!-- Carrusel de eventos -->
+<div id="eventCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-category="all past">
+            <img src="https://jazon.info/cms/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-05-at-12.21.24-680x702.jpeg" alt="Evento Pasado 1">
+        </div>
+        <div class="carousel-item" data-category="all past">
+            <img src="https://jazon.info/cms/wp-content/uploads/2024/10/FIESTA-DE-LA-VIDA-24-tv-680x383.png" alt="Evento Pasado 2">
+        </div>
+        <div class="carousel-item" data-category="all current">
+            <img src="https://jazon.info/cms/wp-content/uploads/2024/06/CNT2_C-680x680.jpg" alt="Evento Actual 1">
+        </div>
+        <div class="carousel-item" data-category="all future">
+            <img src="https://jazon.info/cms/wp-content/uploads/2024/02/Copy-of-Sabado-3-de-febrero-680x952.jpg" alt="Evento Futuro 1">
+        </div>
+        <div class="carousel-item" data-category="all future">
+            <img src="https://jazon.info/cms/wp-content/uploads/2024/08/ALPHA-SEPTIEMBRE-680x680.png" alt="Evento Futuro 2">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+</div>
+
+    <!-- Cuadrados de información -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title">¿Quiénes Somos?</h3>
+                        <p class="card-text">Somos una comunidad de creyentes dedicados a seguir a Cristo y compartir su amor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title">¿Qué significa Jazôn?</h3>
+                        <p class="card-text">Es un vocablo hebreo que significa “Visión”, “Sueño”, “Profecía” o “Dirección de Dios”.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title">¿Por qué hacemos lo que hacemos?</h3>
+                        <p class="card-text">Porque todo el que encuentra a Dios, encuentra vida.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title">¿Cuál es la misión de Jazôn?</h3>
+                        <p class="card-text">Ayudarte a desarrollar una relación personal con Jesús.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title">¿Cuál es la visión de Jazôn?</h3>
+                        <p class="card-text">Somos una iglesia contemporánea con una propuesta fresca e innovadora.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title">¿Cómo se pronuncia la palabra Jazôn?</h3>
+                        <p class="card-text">Se pronuncia como se lee, con acentuación en la “o”: ja – zón.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Divs con imágenes -->
+    <div class="container-fluid d-flex flex-wrap justify-content-around mt-4">
+        <div class="content-div" style="background-image:url('https://jazon.info/cms/wp-content/uploads/2021/08/5.-YouTube-480x339.jpg');">
+            <div class="content-text">
+                <h3>Youtube</h3>
+                <p>Nuestro canal con todo el contenido predicas y más!</p>
+            </div>
+        </div>
+        <div class="content-div" style="background-image:url('https://jazon.info/cms/wp-content/uploads/2021/08/1.-Laiglesiatv-480x339.jpg');">
+            <div class="content-text">
+                <h3>Series de predica</h3>
+                <p>Todas nuestras predicas están en Laiglesia.tv</p>
+            </div>
+        </div>
+        <div class="content-div" style="background-image:url('https://jazon.info/cms/wp-content/uploads/2021/08/16.-Noticias4-480x679.jpg');">
+            <div class="content-text">
+                <h3>Noticias</h3>
+                <p>Leer nuestras noticias recientes y enterarte de lo último que sucede en Jazon.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mapa de ubicación -->
+    <div class="map-container">
+        <h3>Ubicación de la Iglesia</h3>
+        <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509319!2d144.95373531531665!3d-37.81627977975133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577e22b48d40bb8!2sFederation%20Square%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1607485176019!5m2!1sen!2sus' allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="text-center p-4">
+        <p>Jazon &copy; 2024 </p>
+        <h4>¡Apasiónate por tu fe!
+            Estamos en todas las redes sociales
+            para que puedas encontrar a Dios </h4>
+        <p><a href="https://x.com/jazon_info" target="_blank"><i class="bi bi-whatsapp"></i></a> (+591) 77252989</p>
+        <p>
+            <a href="https://www.facebook.com/jazon.info" target="_blank"><i class="bi bi-facebook"></i></a> 
+            <a href="https://www.instagram.com/jazon.info/" target="_blank"><i class="bi bi-instagram"></i></a> 
+            <a href="https://x.com/jazon_info" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.tiktok.com/@jazonchurch" target="_blank"><i class="bi bi-tiktok"></i></a>
+            
+            <a href="https://www.youtube.com/jazon" target="_blank"><i class="bi bi-youtube"></i></a>
+        </p>
+    </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Filtro de eventos para el carrusel
+        document.getElementById('eventFilter').addEventListener('change', function() {
+            const selectedCategory = this.value;
+            const items = document.querySelectorAll('#eventCarousel .carousel-item');
+
+            // Filtra las diapositivas según la categoría seleccionada
+            let firstItem = true; // Identifica el primer ítem para activar
+
+            items.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (category.includes(selectedCategory) || selectedCategory === 'all') {
+                    item.classList.remove('d-none');
+                    if (firstItem) {
+                        item.classList.add('active');
+                        firstItem = false;
+                    } else {
+                        item.classList.remove('active');
+                    }
+                } else {
+                    item.classList.add('d-none');
+                    item.classList.remove('active');
+                }
+            });
+        });
+    </script>  
+</body>
+</html>
