@@ -1,205 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- CSS estilos link -->
+    <link rel="stylesheet" href="css/estilos.css">  
+    <script src="script.js" defer></script>
     <title>Inicio de Sesión</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-        body {
-
-            min-height: 100vh;
-            font-family: 'Georgia', Cambria, serif;
-            background-color: #000000;
-            color: #ffffff;
-        }
-        /* Ubica este código dentro de tu archivo CSS o en el <style> del HTML */
-        @font-face {
-            font-family: "Dancing Script";
-            src: url("fonts/DancingScript-Regular.ttf") format("truetype");
-            font-weight: 400;
-            font-style: normal;
-        }
-        .dancing-script {
-            font-family: "Dancing Script", "cursive";
-            font-weight: 900;
-            font-style: normal;
-            font-size: 100px;
-            text-align: center;
-        }
-
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;           /* Ocupa todo el ancho disponible */
-            max-width: 1000px;     /* Ancho máximo de 1000px */
-            background-color: #000;
-            justify-content: center;
-            align-items: center;
-            margin: auto;          /* Centra horizontalmente */
-            padding: 65px;         /* Opcional: agrega algo de padding */
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra para destacar */
-        }
-
-        .content-container {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-        }
-        .left-panel {
-            background-color: #000000; /* Verde cartuja */
-            color: #D4AF37;
-            flex: 1;
-            /*animacion*/
-            animation: fadeIn 2s;
-            padding: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-;
-        }
-        .right-panel {
-            background-color: #000; /* Fondo negro */
-            color: #D4AF37;
-            flex: 1;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .login-container {
-            max-width: 400px;
-            width: 100%;
-            margin: 0 auto;
-        }
-        .login-container h2 {
-            text-align: center;
-            color: #D4AF37;
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            color: #D4AF37;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #D4AF37;
-            background-color: #000;
-            color: #D4AF37;
-            border-radius: 4px;
-        }
-        .form-group input:focus {
-            border-color: #013220;
-            outline: none;
-        }
-        .btn {
-            width: 100%;
-            padding: 10px;
-            background-color: #D4AF37;
-            color: #000;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #FFD700;
-        }
-        .footer-container {
-        
-            background-color: #000;
-            padding: 40px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #D4AF37;
-            font-size: 15px;
-        }
-        .social-icons a {
-            color: #D4AF37;
-            font-size: 1.2em;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-        .social-icons a:hover {
-            color: #FFD700;
-        }
-     /*Encabezado*/
-        header {
-            background-color: #000;
-            color: #efb810;
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-            border-bottom: 1px solid #efb810;
-        }
-
-        .title-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo {
-            width: 300px;
-            height: 80px;
-        }
-
-        .title {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #efb810;
-        }
-
-        .nav-link {
-            color: #efb810;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #ffffff;
-        }
-
-        /* Secciones */
-        .content-section {
-            padding: 3rem 1rem;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #efb810;
-            border-bottom: 2px solid #efb810;
-            padding-bottom: 5px;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-         /* Pie de página */
-         footer {
-            background-color: #0a0a0a;
-            color: #bdc3c7;
-            padding: 1.5rem 0;
-            text-align: center;
-            
-        }
-
-        footer a {
-            color: #efb810;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: #ffffff;
-        }
-    </style>
 </head>
 <body>
     <header class="p-3">
@@ -207,13 +18,13 @@
             <div class="d-flex align-items-center justify-content-between">
                 <!-- Logo -->
                 <div class="title-container">
-                    <img src="img/logo/logoFinal.png" class="logo" alt="Logo de la Iglesia">
+                    <img src="img/logoFinal.png" class="logo" alt="Logo de la Iglesia">
                 </div>
-                
+                <span class="title">Iglesia Jazon</span>
                 <!-- Botón alineado a la derecha -->
-                <div class="ms-auto">
-                    <a href="index.php" class="btn btn-outline-light">Volver al inicio</a>
-                </div>
+                <ul class="nav col-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2">Inicio</a></li>
+                </ul>
             </div>
         </div>
     </header>
@@ -225,51 +36,51 @@
             <!-- Left Panel for Church Logo/Title -->
             <div class="left-panel">
                 <h1 class="dancing-script ">Iglesia Jazon</h1>
-                <p>Bienvenido a la Iglesia Jazon. Nos dedicamos a servir a la comunidad con amor y fe.</p>
+                <p class="texto">Bienvenido a la Iglesia Jazon. Nos dedicamos a servir a la comunidad con amor y fe.</p>
             </div>
 
             <!-- Right Panel for Login Form -->
             <div class="right-panel">
                 <div class="login-container">
                     <h2>Iniciar Sesión</h2>
-                    <form action="index2.html" method="POST">
+                    <form id="loginForm">
                         <div class="form-group">
-                            <label for="username">Usuario</label>
-                            <input type="text" id="username" name="username" required>
+                            <label for="username">Correo o Usuario</label>
+                            <input type="text" id="username" maxlength="30" name="username" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Contraseña</label>
-                            <input type="password" id="password" name="password" required>
+                            <input type="password" id="password" maxlength="8" name="password" required>
                         </div>
                         <br>
-                        <button type="submit" class="btn">Ingresar</button>
+                        <button type="submit" class="btnForm">Ingresar</button>
                         <br><br>
 
-
-                        <a href="login_recuperar.html"  class="nav-link px-2">¿Olvidadte tu contraseña?</a>
+                        <div id="error-message" style="color: rgb(223, 0, 0);"></div>
+                        <a href="login_recuperar.html" class="contra">¿Olvidaste tu contraseña?</a>
                     </form>
                 </div>
             </div>
         </div>
-        
     </div>
+
+    <!-- Footer -->
     <footer class="text-center p-4">
         <p>Jazon &copy; 2024 </p>
-        <h4>¡Apasiónate por tu fe!
-            Estamos en todas las redes sociales
-            
-            para que puedas encontrar a Dios </h4>
+        <h4>¡Apasiónate por tu fe! Estamos en todas las redes sociales para que puedas encontrar a Dios</h4>
         <p><a href="https://x.com/jazon_info" target="_blank"><i class="bi bi-whatsapp"></i></a> (+591) 77252989</p>
         <p>
             <a href="https://www.facebook.com/jazon.info" target="_blank"><i class="bi bi-facebook"></i></a> 
             <a href="https://www.instagram.com/jazon.info/" target="_blank"><i class="bi bi-instagram"></i></a> 
             <a href="https://x.com/jazon_info" target="_blank"><i class="bi bi-twitter"></i></a>
             <a href="https://www.tiktok.com/@jazonchurch" target="_blank"><i class="bi bi-tiktok"></i></a>
-            
             <a href="https://www.youtube.com/jazon" target="_blank"><i class="bi bi-youtube"></i></a>
         </p>
     </footer>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script de login -->
+    
 </body>
 </html>
