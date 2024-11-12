@@ -1,0 +1,87 @@
+/* Estilos generales */
+body {
+    font-family: 'Georgia', Cambria, serif;
+    background: url('../img/fondo4.png');
+    background-repeat: no-repeat;
+    color: #efb810;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Cabecera */
+header {
+    background-color: #fffcd1f6;
+    color: #efb810;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    border-bottom: 1px solid #efb810;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 200px;
+    height: 80px;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #efb810;
+}
+
+.nav-link {
+    color: #efb810;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+.btn-outline-gold {
+    color: #efb810; /* Color de texto dorado */
+    border: 1px solid #efb810; /* Borde dorado */
+    background-color: transparent; /* Fondo transparente */
+}
+
+.btn-outline-gold:hover {
+    color: #fff; /* Color de texto blanco al hacer hover */
+    background-color: #efb810; /* Fondo dorado al hacer hover */
+    border-color: #efb810; /* Mantener el borde dorado en hover */
+}
+
+/* Estilos del pie de página */
+        footer {    
+            background-color: #fffaaef6;
+            color: #5a5a5a;
+            border-top: 1px solid #efb810;
+        }
+
+        footer a {
+            color: #efb810;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+        /* Texto de navegación oculto (para accesibilidad) */
+        .visually-hidden {
+            display: none;
+        }
+
+        .nav-link {
+            color: gold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: white;
+        }
