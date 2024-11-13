@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             if (data.status === 'success') {
-                window.location.href = data.redirect_url; // Redirigir a la página de inicio con los datos necesarios
+                window.location.href = "index2.php"; // Redirigir a la página de inicio con los datos necesarios
             } else {
                 failedAttempts++;
                 errorMessage.innerText = data.message;

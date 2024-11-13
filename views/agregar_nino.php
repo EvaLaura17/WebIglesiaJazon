@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <span class="title">Iglesia Jazon</span>
                 </div>
                 <div class="title-container">
-                    <a href="index2.html" class="nav-link px-2">Dashboard</a>
+                    <a href="index2.php" class="nav-link px-2">Dashboard</a>
                 </div>
                 <div class="title-container">
                     <a href="registro_padre.php" class="nav-link px-2">Registro del padre</a>

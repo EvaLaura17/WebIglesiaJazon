@@ -74,6 +74,16 @@ $nombreCompleto = $nombre . ' ' . $apellido; // Concatenando el nombre y apellid
             <div class="container">
                 <h2 class="section-title">Panel de Gestión</h2>
                 <div class="row g-4">
+                    <!-- Notificaciones -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header"><i class="bi bi-journal-text"></i> Enviar Notificacion</div>
+                            <div class="card-body">
+                                <p>Enviar notificacion al tutor de un niño.</p>
+                                <a href="enviar_notificacion.php" class="btn btn-primary">Enviar Notificacion</a>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Agregar Niños -->
                     <div class="col-md-4">
                         <div class="card">
@@ -97,7 +107,7 @@ $nombreCompleto = $nombre . ' ' . $apellido; // Concatenando el nombre y apellid
                     <!-- Agregar Enfermedades -->
                     <div class="col-md-4">
                         <div class="card">
-                            <div class="card-header"><i class="bi bi-person-lines-fill"></i> Agregar Enfermedades</div>
+                            <div class="card-header"><i class="bi bi-journal-text"></i> Agregar Enfermedades</div>
                             <div class="card-body">
                                 <p>Registra enfermedades de los niños.</p>
                                 <a href="agregar_enfermedad.php" class="btn btn-primary">Agregar Enfermedad</a>
@@ -107,7 +117,7 @@ $nombreCompleto = $nombre . ' ' . $apellido; // Concatenando el nombre y apellid
                     <!-- Ver Enfermedades -->
                     <div class="col-md-4">
                         <div class="card">
-                            <div class="card-header"><i class="bi bi-person-lines-fill"></i> Ver Enfermedades</div>
+                            <div class="card-header"><i class="bi bi-journal-text"></i> Ver Enfermedades</div>
                             <div class="card-body">
                                 <p>Consulta y administra la lista de niños con enfermedades.</p>
                                 <a href="ver_enfermedad.php" class="btn btn-primary">Ver Niños</a>
