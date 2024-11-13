@@ -165,7 +165,7 @@ $nombreCompleto = $nombre . ' ' . $apellido;
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- crear reportes -->
                     <div class="col-md-4">
                         <div class="card">
@@ -173,21 +173,22 @@ $nombreCompleto = $nombre . ' ' . $apellido;
                             <div class="card-body">
                                 <p>Generar reportes sobre actividades, eventos y los niños.</p>
                                 <a href="reportes.php" class="btn btn-primary">Generar reporte</a>
-                        </div>
-                    </div>
-
-                    <?php if ($tipo_usuario === 'supervisor'): ?>
-
-                        <!-- Agregar Cursos -->
-                        <div class="col-md-4">
-                            <div class="card">
-                                <div class="card-header"><i class="bi bi-journal-text"></i> Agregar Curso</div>
-                                <div class="card-body">
-                                    <p>Agregar un nuevo Curso al sistema.</p>
-                                    <a href="agregar_curso.php" class="btn btn-primary">Registrar Cursos</a>
-                                </div>
                             </div>
                         </div>
+                    </div>
+                    <!-- Agregar Cursos -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header"><i class="bi bi-journal-text"></i> Agregar Curso</div>
+                            <div class="card-body">
+                                <p>Agregar un nuevo Curso al sistema.</p>
+                                <a href="agregar_curso.php" class="btn btn-primary">Registrar Cursos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php if ($tipo_usuario === 'supervisor'): ?>
+
+
                         <!-- Ver Cursos -->
                         <div class="col-md-4">
                             <div class="card">
