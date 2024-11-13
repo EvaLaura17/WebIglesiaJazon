@@ -42,7 +42,7 @@ try {
             echo json_encode([
                 'status' => 'success',
                 'message' => 'Inicio de sesión exitoso como supervisor',
-                'redirect_url' => '../views/index2.php?nombre=' . urlencode($user['nombre']) . '&apellido=' . urlencode($user['ape_pat']). " " .urlencode($user['ape_mat']) . '&tipo_usuario=supervisor'
+                'redirect_url' => '../views/index2.php?nombre=' . urlencode($user['nombre']) . '&apellido=' . urlencode($user['ape_pat']) . " " . urlencode($user['ape_mat']) . '&tipo_usuario=supervisor'
             ]);
         } elseif ($stmtMaestro->rowCount() > 0) {
             // Usuario es un maestro
@@ -51,7 +51,8 @@ try {
             $_SESSION['usuario'] = $_POST['username'];
             $_SESSION['tipo_usuario'] = 'maestro';
             $_SESSION['nombre'] = $user['nombre'];  // Guardar nombre
-            $_SESSION['apellido'] = $user['apellido'];  // Guardar apellido
+            $_SESSION['ape_pat'] = $user['ape_pat'];  // Guardar apellido
+            $_SESSION['ape_mat'] = $user['ape_mat'];  // Guardar apellido
 
             // Registrar inicio de sesión
             $insertSQL = "INSERT INTO registro_login (usuario) VALUES ($usuario)";
@@ -64,7 +65,7 @@ try {
             echo json_encode([
                 'status' => 'success',
                 'message' => 'Inicio de sesión exitoso como maestro',
-                'redirect_url' => '../views/index2.php?nombre=' . urlencode($user['nombre']) . '&apellido=' . urlencode($user['apellido']) . '&tipo_usuario=maestro'
+                'redirect_url' => '../views/index2.php?nombre=' . urlencode($user['nombre']) . '&apellido=' . urlencode($user['ape_pat']) . " " . urlencode($user['ape_mat']) . '&tipo_usuario=maestro'
             ]);
         } else {
             echo json_encode(['status' => 'error', 'message' => 'Usuario o contraseña incorrectos']);

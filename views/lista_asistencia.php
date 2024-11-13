@@ -56,7 +56,6 @@ try {
                 </div>
                 <span class="title">Iglesia Jazon</span>
                 <ul class="nav col-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="index.html" class="nav-link px-2">Inicio</a></li>
                     <li><a href="index2.php" class="nav-link px-2">Dashboard</a></li>
                 </ul>
             </div>

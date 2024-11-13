@@ -82,6 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,6 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/conAgregar_nino.css">
 </head>
+
 <body>
     <!-- CABECERA -->
     <header class="p-3">
@@ -130,7 +132,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="form-group mb-3">
                 <label for="fecha_nacimiento">Fecha de Nacimiento</label>
-                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-control" required>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-control" min="2011-01-01"
+                    required>
             </div>
             <div class="form-group mb-3">
                 <label for="tutor_id">Selecciona el Tutor</label>
@@ -157,5 +160,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Establecer la fecha máxima en el campo input a 4 años atrás de la fecha actual
+        const today = new Date();
+        const maxDate = new Date(today);
+        maxDate.setFullYear(today.getFullYear() - 4); // Restar 4 años
+
+        const formattedMaxDate = maxDate.toISOString().split('T')[0]; // Formato YYYY-MM-DD
+        document.getElementById('fecha_nacimiento').setAttribute('max', formattedMaxDate);
+    </script>
 </body>
+
 </html>

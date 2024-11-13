@@ -47,17 +47,18 @@ try {
                 $stmt_tutor->bindParam(':id_nino', $id_nino, PDO::PARAM_INT);  // Usa el ID del niño
                 $stmt_tutor->execute();
                 $tutor = $stmt_tutor->fetch(PDO::FETCH_ASSOC);
-
+                $tipo = "salida";
                 if ($tutor && isset($tutor['id_tutor'])) {
                     // Si se encontró el tutor y el id_tutor no es NULL
                     $numero_tutor = $tutor['num_telefono'];
                     $mensaje = "El niño " . $nino['nombre'] . " fue recogido por " . $encargado['nombre'] . " " . $encargado['apellido'] . " a las " . $hora;
 
                     // Insertar la notificación en la base de datos
-                    $insert_notif_sql = "INSERT INTO notificacion (notificacion, fecha, id_tutor) VALUES (:notificacion, :fecha, :id_tutor)";
+                    $insert_notif_sql = "INSERT INTO notificacion (notificacion, fecha, tipo, id_tutor) VALUES (:notificacion, :fecha, :tipo, :id_tutor)";
                     $stmt_notif = $conn->prepare($insert_notif_sql);
                     $stmt_notif->bindParam(':notificacion', $mensaje);
                     $stmt_notif->bindParam(':fecha', $fecha);
+                    $stmt_notif->bindParam(':tipo', $tipo);
                     $stmt_notif->bindParam(':id_tutor', $tutor['id_tutor']);
                     $stmt_notif->execute();
                     echo "Notificación enviada y almacenada.";
@@ -95,7 +96,6 @@ try {
                 </div>
                 <span class="title">Iglesia Jazon</span>
                 <ul class="nav col-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="index.html" class="nav-link px-2">Inicio</a></li>
                     <li><a href="index2.php" class="nav-link px-2">Dashboard</a></li>
                 </ul>
             </div>

@@ -1,16 +1,17 @@
 <?php
 session_start();
 
-if (isset($_GET['nombre']) && isset($_GET['apellido']) && isset($_GET['tipo_usuario'])) {
-    $nombre = $_GET['nombre'];
-    $apellido = $_GET['apellido'];
-    $tipo_usuario = $_GET['tipo_usuario'];
+if (isset($_SESSION['nombre']) && isset($_SESSION['ape_pat']) && isset($_SESSION['ape_mat']) && isset($_SESSION['tipo_usuario'])) {
+    $nombre = $_SESSION['nombre'];
+    $apellido = $_SESSION['ape_pat'] . ' ' . $_SESSION['ape_mat'];
+    $tipo_usuario = $_SESSION['tipo_usuario'];
 } else {
     $nombre = 'Usuario no autenticado';
     $apellido = '';
     $tipo_usuario = 'desconocido';
 }
-$nombreCompleto = $nombre . ' ' . $apellido; // Concatenando el nombre y apellido
+$nombreCompleto = $nombre . ' ' . $apellido;
+
 ?>
 
 
@@ -45,9 +46,9 @@ $nombreCompleto = $nombre . ' ' . $apellido; // Concatenando el nombre y apellid
                 </div>
                 <div>
                     <p id="usuario"><?php echo $nombreCompleto; ?></p>
+                    <a href="../includes/logout.php" class="btn btn-outline-danger">Cerrar sesión</a>
                 </div>
             </div>
-        </div>
     </header>
     <!--CONTENIDO-->
     <?php if ($tipo_usuario == 'desconocido'): ?>
@@ -164,58 +165,59 @@ $nombreCompleto = $nombre . ' ' . $apellido; // Concatenando el nombre y apellid
                             </div>
                         </div>
                     </div>
-                    <!-- Agregar Encargado -->
+                    
+                    <!-- crear reportes -->
                     <div class="col-md-4">
                         <div class="card">
-                            <div class="card-header"><i class="bi bi-person-plus-fill"></i> Agregar Encargado</div>
+                            <div class="card-header"><i class="bi bi-journal-text"></i>Crear reportes</div>
                             <div class="card-body">
-                                <p>Agrega un Encargado para recoger al niño al sistema.</p>
-                                <a href="agregar_encargado.php" class="btn btn-primary">Agregar Encargado</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Ver Encargados -->
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-header"><i class="bi bi-journal-text"></i> Ver Encargados</div>
-                            <div class="card-body">
-                                <p>Consulta y administra la lista de Encargados de recoger al niño.</p>
-                                <a href="ver_encargado.php" class="btn btn-primary">Ver Encargados</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Mostrar a todos los niños (Solo si es Supervisor o Maestro) -->
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-header"><i class="bi bi-journal-text"></i> Mostrar a todos los niños</div>
-                            <div class="card-body">
-                                <p>Consulta la cantidad de niños.</p>
-                                <a href="reporte_ninos.php" class="btn btn-primary">Ver niños</a>
-                            </div>
+                                <p>Generar reportes sobre actividades, eventos y los niños.</p>
+                                <a href="reportes.php" class="btn btn-primary">Generar reporte</a>
                         </div>
                     </div>
 
-                    <!-- Agregar Cursos -->
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-header"><i class="bi bi-journal-text"></i> Agregar Curso</div>
-                            <div class="card-body">
-                                <p>Agregar un nuevo Curso al sistema.</p>
-                                <a href="agregar_curso.php" class="btn btn-primary">Registrar Cursos</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Ver Cursos -->
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-header"><i class="bi bi-journal-text"></i> Mostrar Cursos</div>
-                            <div class="card-body">
-                                <p>Consulta y administra la lista de cursos.</p>
-                                <a href="ver_cursos.php" class="btn btn-primary">Ver Cursos</a>
-                            </div>
-                        </div>
-                    </div>
                     <?php if ($tipo_usuario === 'supervisor'): ?>
+
+                        <!-- Agregar Cursos -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header"><i class="bi bi-journal-text"></i> Agregar Curso</div>
+                                <div class="card-body">
+                                    <p>Agregar un nuevo Curso al sistema.</p>
+                                    <a href="agregar_curso.php" class="btn btn-primary">Registrar Cursos</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ver Cursos -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header"><i class="bi bi-journal-text"></i> Mostrar Cursos</div>
+                                <div class="card-body">
+                                    <p>Consulta y administra la lista de cursos.</p>
+                                    <a href="ver_cursos.php" class="btn btn-primary">Ver Cursos</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Agregar Encargado -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header"><i class="bi bi-person-plus-fill"></i> Agregar Encargado</div>
+                                <div class="card-body">
+                                    <p>Agrega un Encargado para recoger al niño al sistema.</p>
+                                    <a href="agregar_encargado.php" class="btn btn-primary">Agregar Encargado</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ver Encargados -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header"><i class="bi bi-journal-text"></i> Ver Encargados</div>
+                                <div class="card-body">
+                                    <p>Consulta y administra la lista de Encargados de recoger al niño.</p>
+                                    <a href="ver_encargado.php" class="btn btn-primary">Ver Encargados</a>
+                                </div>
+                            </div>
+                        </div>
                         <!-- Registrar Maestro -->
                         <div class="col-md-4">
                             <div class="card">
