@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- CSS estilos link -->
+    <link rel="stylesheet" href="css/estilos.css">  
+    <script src="script.js" defer></script>
+    <title>Inicio de Sesión</title>
+</head>
+<body>
+    <header class="p-3">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between">
+                <!-- Logo -->
+                <div class="title-container">
+                    <img src="img/logoFinal.png" class="logo" alt="Logo de la Iglesia">
+                </div>
+                <span class="title">Iglesia Jazon</span>
+                <!-- Botón alineado a la derecha -->
+                <ul class="nav col-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2">Inicio</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main container -->
+    <div class="main-container">
+        <!-- Content container -->
+        <div class="content-container">
+            <!-- Left Panel for Church Logo/Title -->
+            <div class="left-panel">
+                <h1 class="dancing-script ">Iglesia Jazon</h1>
+                <p class="texto">Bienvenido a la Iglesia Jazon. Nos dedicamos a servir a la comunidad con amor y fe.</p>
+            </div>
+
+            <!-- Right Panel for Login Form -->
+            <div class="right-panel">
+                <div class="login-container">
+                    <h2>Iniciar Sesión</h2>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="username">Correo o Usuario</label>
+                            <input type="text" id="username" maxlength="30" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña</label>
+                            <input type="password" id="password" maxlength="8" name="password" required>
+                        </div>
+                        <br>
+                        <button type="submit" class="btnForm">Ingresar</button>
+                        <br><br>
+
+                        <div id="error-message" style="color: rgb(223, 0, 0);"></div>
+                        <a href="login_recuperar.html" class="contra">¿Olvidaste tu contraseña?</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center p-4">
+        <p>Jazon &copy; 2024 </p>
+        <h4>¡Apasiónate por tu fe! Estamos en todas las redes sociales para que puedas encontrar a Dios</h4>
+        <p><a href="https://x.com/jazon_info" target="_blank"><i class="bi bi-whatsapp"></i></a> (+591) 77252989</p>
+        <p>
+            <a href="https://www.facebook.com/jazon.info" target="_blank"><i class="bi bi-facebook"></i></a> 
+            <a href="https://www.instagram.com/jazon.info/" target="_blank"><i class="bi bi-instagram"></i></a> 
+            <a href="https://x.com/jazon_info" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.tiktok.com/@jazonchurch" target="_blank"><i class="bi bi-tiktok"></i></a>
+            <a href="https://www.youtube.com/jazon" target="_blank"><i class="bi bi-youtube"></i></a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script de login -->
+    
+</body>
+</html>
