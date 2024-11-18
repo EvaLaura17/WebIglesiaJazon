@@ -1,0 +1,155 @@
+/* Contenedor responsivo para la tabla */
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* Estilos de la tabla */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+     align-items: center;
+     text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #efb810;
+    color: rgb(122, 121, 121);
+    font-size: 1em;
+}
+
+th {
+    background-color: #ffbf00;
+    color: rgb(255, 255, 255);
+}
+
+tr:nth-child(even) {
+    background-color: #ffef95;
+}
+
+/* Estilos de los contenedores */
+.container3, .container2 {
+    background-color: rgba(255, 255, 255, 0.425);
+    opacity: 0.9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: auto;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.container2 {
+    max-width: 70%;
+    color: #5e5e5e;
+}
+
+/* Media queries para responsividad en contenedores, tablas, select y botones */
+@media (max-width: 768px) {
+    .container3, .container2 {
+        max-width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    th, td {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .filter-container select {
+        width: 100%;
+        font-size: 0.9em;
+        padding: 8px;
+    }
+    
+    /* Botones más pequeños en pantallas pequeñas */
+    .btn1 {
+        padding: 1px 5px;
+        font-size: 0.1em;
+    }
+}
+
+/* Estilos del filtro de fecha */
+.filter-container select {
+    padding: 5px;
+    font-size: 15px;
+    background-color: #fff2a7;
+    color: #5e5e5e;
+    border: 2px solid #efb810;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 40%;
+    border-radius: 10px;
+}
+
+.filter-container select:hover {
+    background-color: #ffbf00;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+h1 {
+    color: #efb810;
+    border-bottom: 2px solid #efb810;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos de los botones */
+.btn1 {
+    text-decoration: none;
+    padding: 1px 10px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 1em;
+    margin-bottom: 40px;
+}
+
+.btn-edit {
+    background-color: #51dd00;
+}
+
+.btn-edit:hover {
+    background-color: #ffffff;
+    color: #51dd00;
+    border: 3px solid #51dd00;
+}
+
+.btn-delete {
+    background-color: #e43a4b;
+}
+
+.btn-delete:hover {
+    background-color: #ffffff;
+    color: #e43a4b;
+    border: 3px solid #e43a4b;
+}
+
+/* Efecto de clic en los botones */
+.btn:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+.section-title {
+    font-size: 45px;
+    color: #efb810;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

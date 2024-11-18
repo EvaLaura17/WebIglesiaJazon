@@ -1,0 +1,167 @@
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+/* Contenedores de contenido */
+.content-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #ffffff;
+    gap: 20px;
+}
+.left-panel, .right-panel {
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+}
+.left-panel {
+    background-color: #ffffff00;
+    color: gold;
+}
+.right-panel {
+    background-color: #ffffff00;
+    color: gold;
+    font-family: 'Acme', sans-serif;
+}
+
+/* Formulario */
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+.login-container h2 {
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+    color: #d3b03d;
+    margin-bottom: 20px;
+}
+.form-group label {
+    color: rgb(223, 189, 0);
+    font-size: 18px;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #fcc530;
+    background-color: #ffffff;
+    color: #ffce2d;
+    border-radius: 4px;
+}
+.form-group input:focus, .form-group select:focus {
+    border-color: #ffd900;
+    background-color: #fff09a;
+    outline: none;
+}
+
+/* Botón del formulario */
+.btnForm {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffce2d;
+    border: 2px solid gold;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+.btnForm:hover {
+    background-color: #ffffff;
+    border: 2px solid gold;
+    color: gold;
+}
+ /*TIPO DE LETRA PALMER */
+ @font-face {
+    font-family: "Dancing Script";
+    src: url("fonts/DancingScript-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+.dancing-script {
+    font-family: "Dancing Script", "cursive";
+    font-weight: 900;
+    font-style: normal;
+    font-size: 100px;
+    text-align: center;}
+
+/* Mensaje */
+.mensaje {
+    background-color: #fff2a7;
+    opacity: 0.8;
+    color: #757575;
+    padding: 15px;
+    border-radius: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: auto;
+    box-sizing: border-box;
+}
+.contra{
+    cursor: pointer;
+    color: #d3b03d;
+    text-decoration: none;
+    font-size: 17px;
+}   
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    .logo {
+        width: 120px;
+    }
+    .content-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .left-panel, .right-panel {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    .main-container {
+        padding: 20px;
+    }
+    .btnForm {
+        font-size: 14px;
+        padding: 8px;
+    }
+    footer {
+        font-size: 0.9rem;
+    }
+}
+/* Eliminar las flechas de los campos tipo number */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none; /* Standard property */
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+    appearance: textfield; /* Standard property */
+}

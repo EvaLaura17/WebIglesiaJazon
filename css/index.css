@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body {
+    background: url('../img/fondo4.png');
+    background-repeat: no-repeat;
+    color: #efb810;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Georgia', Cambria, serif;
+}
+
+/* HEADER */
+header {
+    background-color: #fffcd1f6;
+    color: #efb810;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid #efb810;
+    padding: 0.5rem 1rem;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 200px;
+    height: 80px;
+}
+
+.title {
+    color: #efb810;
+    font-family: "Dancing Script", "cursive";
+    font-weight: 900;
+    font-style: normal;
+    font-size: 3.5rem;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link {
+    color: rgb(255, 193, 58);
+    transition: color 0.3s ease;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: #ffa703;
+    text-decoration: underline;
+}
+
+.btn {
+    background-color: rgb(255, 208, 0);
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 0;
+    border: 2px solid #ffcd37;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    border: 2px solid #ffc400;
+    color: #ffbb00;
+}
+
+/* FOOTER */
+footer {
+    background-color: #fffaaef6;
+    color: #7e7e7e;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+footer a {
+    color: #efb810;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDAD */
+
+/* Ajustes para pantallas medianas (tabletas, dispositivos de 992px o menos) */
+@media screen and (max-width: 992px) {
+    .title {
+        font-size: 3.8rem; /* Reducir tamaño de la fuente en pantallas medianas */
+    }
+
+    .logo {
+        width: 200px;
+        height: 60px;
+    }
+
+    .nav-container {
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 18px; /* Reducir tamaño de fuente en enlaces */
+    }
+
+    .btn {
+        font-size: 18px; /* Reducir tamaño de fuente en botón */
+    }
+}
+
+/* Ajustes para pantallas pequeñas (teléfonos, dispositivos de 768px o menos) */
+@media screen and (max-width: 768px) {
+    .title-container {
+        flex-direction: column; /* Cambiar a columna en dispositivos pequeños */
+        align-items: center;
+    }
+
+    .title {
+        font-size: 2.8rem; /* Reducir tamaño de la fuente */
+        text-align: center;
+    }
+
+    .logo {
+        width: 180px;
+        height: 80px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+
+    footer {
+        padding: 2rem 0;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (teléfonos pequeños, dispositivos de 576px o menos) */
+@media screen and (max-width: 576px) {
+    .title {
+        font-size: 1.8rem; /* Reducir más el tamaño de la fuente */
+    }
+
+    .logo {
+        width: 120px;
+        height: 40px;
+    }
+
+    .nav-container {
+        gap: 5px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    footer {
+        padding: 0.5rem 0;
+        font-size: 14px; /* Ajustar el tamaño del texto del footer */
+    }
+}
+/* Eliminar las flechas de los campos tipo number */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none; /* Standard property */
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+    appearance: textfield; /* Standard property */
+}

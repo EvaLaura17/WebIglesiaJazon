@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+    flex-container {
+        display:  flex;
+        width: 100%;
+        align-items: center; /* Alinea verticalmente al centro */
+        margin-bottom: 10px;
+        gap: 20px; /* Espacio entre los elementos */
+    }
+    .section-title {
+        font-size: 45px;
+        color: #efb810;
+        margin-bottom: 30px;
+    }
+
+
+
+form select {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fffcd1f6;
+    color: #efb810;
+    border: 1px solid #efb810;
+    border-radius: 10px;
+    width: 250px; /* Ajusta según lo que necesites */
+
+}
+
+
+
+.btn2 {
+    padding: 10px 20px;
+    background-color: #ffc415;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn2:hover {
+    border: 1px solid #efb810;
+    color: gold;
+    background-color: white;
+}
+
+.flex-container {
+    display: flex;  /* Activa Flexbox */
+    align-items: center;  /* Alinea verticalmente */
+    gap: 15px;  /* Espacio entre los elementos */
+}
+
+.flex-container label {
+    margin-right: 10px;  /* Espacio entre el label y el select */
+}
+
+.flex-container select {
+    width: 200px;  /* Ajusta el ancho del select si es necesario */
+}
+
+.flex-container button {
+    padding: 10px 20px;
+    background-color: #ffc421;
+    color: #fff;
+    border: 1px solid #efb810;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flex-container button:hover {
+    background-color: #ffbf00;
+}
+
+
+

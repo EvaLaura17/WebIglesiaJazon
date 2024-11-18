@@ -1,0 +1,95 @@
+/* Secciones */
+.content-section {
+    padding: 3rem 1rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #efb810;
+    /* Color dorado */
+    border-bottom: 2px solid #efb810;
+    /* Línea dorada debajo del título */
+    padding-bottom: 5px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Tabla */
+table {
+    width: 100%; /* Ajuste a 100% para evitar desbordamiento */
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid gold;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: gold; /* Cabecera en dorado */
+    color: white; /* Texto en blanco */
+}
+
+td {
+    color: #4a4a4a; /* Texto de celdas en gris oscuro */
+}
+
+tr:nth-child(even) {
+    background-color: #ffe0b2; /* Color naranja claro para filas pares */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Color blanco para filas impares */
+}
+
+/* Estilo de botones */
+.btn1 {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #ff8c00; /* Naranja para el fondo */
+}
+
+.btn1:hover {
+    background-color: #ffae42; /* Naranja más claro al pasar el ratón */
+    color: white;
+}
+
+.btn-asistencia {
+    background-color: #ff8c00; /* Botón naranja */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.btn-asistencia:hover {
+    background-color: #ffae42; /* Naranja más claro al pasar el ratón */
+    color: white;
+}
+
+.btn-asistencia.ausente {
+    background-color: #e43a4b; /* Color rojo para ausente */
+}
+
+.btn-asistencia.ausente:hover {
+    background-color: #ff5e5e; /* Rojo claro al pasar el ratón */
+}
+
+.selected {
+    background-color: #6c757d !important;
+    /* Color gris oscuro para seleccionado */
+}
+
+.btn:active {
+    transform: scale(0.95); /* Simula el "hundimiento" al hacer clic */
+    opacity: 0.8; /* Reduce ligeramente la opacidad para el efecto */
+}

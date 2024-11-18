@@ -1,0 +1,64 @@
+.container {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #ffa500; /* Borde naranja */
+    padding: 20px;
+    width: 60%; /* Ocupa todo el ancho */
+    border-radius: 8px;
+    align-content: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #efb810;
+    color: #efb810;
+}
+
+.form-group {
+    display: flex;
+    align-items: center; /* Alineación vertical */
+    justify-content: space-between; /* Distribuye el espacio horizontal */
+    margin-bottom: 15px;
+    gap: px; /* Espaciado uniforme entre elementos */
+}
+
+.form-label {
+    text-align: left;
+    margin: 5px;
+    font-size: 17px;
+    flex: 1; /* Toma el mismo espacio proporcional */
+}
+
+form select {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fffcd1f6;
+    color: rgb(92, 92, 92);
+    border: 2px solid #ffc825;
+    border-radius: 10px;
+    width: 100%; /* Ocupa todo el ancho asignado por flexbox */
+    flex: 3; /* Selección ocupa más espacio */
+    max-width: 45%; /* Evita que crezca demasiado */
+}
+
+form select:hover {
+    background-color: #ffec7e; /* Cambia a un tono más oscuro */
+    border-color: #ffec7e; /* Cambia el borde a un dorado más oscuro */
+    color: #646464; /* Cambia el color del texto a blanco */
+}
+
+.btn-primary {
+    background-color: #ffc421;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    flex: 2; /* Botón toma más espacio */
+    max-width: 25%; /* Tamaño uniforme */
+    border-color: #ffffff;
+    height: auto; /* Ajusta automáticamente la altura */
+}
+
+.btn-primary:hover {
+    background-color: #ffbf00; /* Naranja oscuro */
+}

@@ -1,0 +1,85 @@
+/* Contenedor principal */
+.form-container {
+    background-color: #fff1c3f6; /* Fondo blanco */
+    border: 3px solid #ffda38; /* Bordes naranjas */
+    border-radius: 10px; /* Esquinas redondeadas */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px; /* Ancho máximo del formulario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para los labels */
+.form-container label {
+    display: block; /* Ocupa toda la línea */
+    margin-bottom: 5px;
+    color: #efb810; /* Plomo */
+    font-weight: bold;
+}
+
+/* Estilo para los inputs */
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffc918fd; /* Bordes naranja */
+    border-radius: 5px;
+    background-color: #ffffff; /* Naranja piel */
+    font-size: 14px;
+    color: #555; /* Gris oscuro */
+}
+
+/* Estilo específico para el botón */
+.form-container button {
+    background-color: #ffb920; /* Naranja */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%; /* Botón de ancho completo */
+}
+
+.form-container button:hover {
+    background-color: #ffb920; /* Naranja más oscuro al pasar el mouse */
+}
+
+/* Enlaces estilizados */
+.form-container .btn {
+    display: inline-block;
+    background-color: #ffb920; /* Naranja */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-container .btn:hover {
+    background-color: #ffb920; /* Naranja más oscuro */
+}
+
+/* Ajustes de responsividad */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-container button {
+        font-size: 14px;
+    }
+}
+/*error*/
+.error-msg {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    display: block;
+}
+
